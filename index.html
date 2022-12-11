@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <title>Prediksi Kanker Payudara</title>
+</head>
+<body>
+  <!-- Home -->
+    <div id="home" class="home">
+        <div class="home-content">
+          <div class="title">
+            <h1>PREDIKSI KANKER PAYUDARA</h1>
+          </div>
+        </div>
+        <div class="buttons">
+          <button><a href="#welcome">PENDAHULUAN</a></button>
+          <button><a href="#how-to-use">CARA PENGGUNAAN</a></button>
+          <button><a href="#predict">PREDIKSI SEKARANG!</a></button>
+        </div>
+    </div>
+    <!-- Home End -->
+
+    <!-- Welcome -->
+    <div id="welcome" class="welcome">
+      <h1 class="page-title">PENDAHULUAN</h1>  
+      <div class="slideshow-container">
+
+            <div class="mySlides">
+              <h1 class="exp-title">Apa Itu Kanker Payudara?</h1>
+              <img class="exp-img" src="./src/assets/breast.png" alt="breast-cancer">
+              <p class="description">Kanker payudara adalah penyakit di mana sel-sel ganas (kanker) terbentuk di jaringan payudara. Terdapat berbagai jenis kanker payudara. 2 kelompok utama adalah kanker payudara non-invasif dan kanker payudara invasif.</p>
+            </div>
+            
+            <div class="mySlides">
+              <h1 class="exp-title">Fakta Menarik tentang Kanker Payudara</h1>
+              <img class="exp-img" src="./src/assets/facts.jpg" alt="breast-cancer">
+              <p class="description">Ada peluang tinggi untuk bisa pulih jika terdeteksi pada tahap awal.</p>
+            </div>
+            
+            <div class="mySlides">
+              <h1 class="exp-title">Penyebab Kanker Payudara</h1>
+              <img class="exp-img" src="./src/assets/causes.jpg" alt="breast-cancer">
+              <p class="description">Diatas merupakan gaya hidup yang menyebabkan tingginya tingkat resiko kanker payudara</p>
+            </div>
+
+            <div class="mySlides">
+              <h1 class="exp-title">Deteksi Dini Potensi Kanker Payudara</h1>
+              <img class="exp-img" src="./src/assets/detect.png" alt="breast-cancer">
+              <p class="description">Penyedia layanan kesehatan Anda akan melakukan pemeriksaan payudara dan bertanya tentang seputar keluarga Anda, riwayat medis dan gejala yang ada. Penyedia layanan kesehatan Anda juga akan merekomendasikan tes untuk memeriksa kelainan payudara. Tes ini biasanya termasuk
+                USG PAYUDARA, MAMMOGRAM DIAGNOSTIC, GAMBAR RESONANSI MAGNETIK PAYUDARA (MRI), BIOPSI.</p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="dot-container">
+              <span class="dot dot-1" onclick="currentSlide(1)"></span> 
+              <span class="dot dot-2" onclick="currentSlide(2)"></span> 
+              <span class="dot dot-3" onclick="currentSlide(3)"></span>
+              <span class="dot dot-4" onclick="currentSlide(4)"></span> 
+              </div>
+        </div>
+    </div>
+    <!-- Welcome End -->
+
+    <!-- How To Use -->
+    <div id="how-to-use" class="how-to-use">
+      <h1 class="page-title">CARA PENGGUNAAN</h1>
+      <div class="content">
+        <h2>1. Masukkan identitas anda</h2>
+        <h2>2. Masukkan foto hasil scan</h2>
+        <h2>3. Klik tombol submit</h2>
+        <h2>4. Hasil akan muncul di sebelah kanan pada kolom "Hasil"</h2>
+      </div>
+    </div>
+    <!-- How To Use End -->
+
+    <!-- Predict  -->
+    <div id="predict" class="predict">
+      <h1 class="page-title">P R E D I K S I</h1>
+      <div class="box">
+                <div class="form">
+                  <form onsubmit="return false">
+                    <div class="input-data">
+                      <label for="name">Nama</label>
+                      <input type="text" id="name" placeholder="Masukkan Nama" required>
+                      <p class="error" id="error-name">Masukkan Nama Anda!!</p>
+                    </div>
+                    <div class="input-data">
+                      <label for="age">Umur</label>
+                      <input type="number" id="age" placeholder="Masukkan Umur" required>
+                      <p class="error" id="error-age">Masukkan Umur Anda!!</p>
+                    </div>
+                    <div class="input-data">
+                      <label for="gender">Gender</label>
+                      <select name="gender" id="gender" required>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                      </select>
+                    </div>
+                    <div class="input-data">
+                      <label for="image">Gambar Scan</label>
+                      <input type="file" accept="image/*" name="image" id="image" required>
+                      <p class="error" id="error-image">Masukkan Gambar Scan!!</p>
+                    </div>
+                    <img src="" width="50px" alt="" class="preview" hidden>
+                    <div class="submit-btn">
+                      <input type="submit" value="Submit">
+                    </div>
+                    <div class="reset-btn">
+                      <input type="reset" value="Reset">
+                    </div>
+                  </form>
+                  
+                </div>
+              <div class="hasil">
+                <hr>
+                <h3 class="result-title">Hasil</h3>
+                <div class="loader"></div>
+                <div class="result"></div>
+              </div>
+      </div>
+    </div>
+    <!-- Predict End -->
+
+    <script type="module" src="./src/app.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>

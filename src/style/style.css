@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif; 
+}
+
+.home {
+    background: url('../assets/background.png');
+    min-height: 100vh;
+    background-size: cover;
+    display: inline-block;
+    flex-direction: column;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* position: relative; */
+}
+
+.title {
+    padding: 10px;
+    max-width: 60%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.title h1 {
+    font-weight: 600;
+    font-size: 75px;
+    padding: 5px;
+    color: white;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 5px solid black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;  
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: rgba(204, 188, 188, 0.7)
+}
+
+.buttons a{
+  text-decoration: none;
+  color: black;
+}
+
+.welcome, .predict {
+    background: url('../assets/background.png');
+    background-color: black;
+    min-height: 100vh;
+    background-size: cover;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title{
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.slideshow-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+  
+.mySlides {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+  
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.exp-title {
+    padding: 20px;
+}
+
+.exp-img {
+    max-height: 400px;
+}
+
+.description {
+    font-size: larger;
+    padding: 20px;
+}
+
+.how-to-use {
+    background: url('../assets/background.png');
+    min-height: 100vh;
+    background-size: cover;
+    display: block;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    flex-direction: column;
+}
+
+.content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.content h2 {
+  margin-top: 20px;
+}
+
+.predict {
+    background: url('../assets/background.png');
+    background-color: black;
+    min-height: 100vh;
+    background-size: cover;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.title {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.form {
+    width: 50%;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.hasil {
+  width: 50%;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.input-data {
+  padding-bottom: 10px;
+}
+
+.input-data label {
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0;
+  padding-bottom: 20px;
+}
+
+.input-data input,
+.input-data select {
+  height: 40px;
+  width: 95%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0 10px;
+  font-size: 18px;
+  margin-left: 2%;
+}
+
+.submit-btn input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: rgb(209, 209, 209);
+  background: rgba(21, 81, 190);
+  cursor: pointer;
+}
+
+.submit-btn input:hover {
+  background: rgba(47, 151, 199);
+  color: rgb(255, 255, 255);
+}
+
+.reset-btn input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: rgb(209, 209, 209);
+  background: rgb(189, 21, 21);
+  cursor: pointer;
+}
+
+.reset-btn input:hover{
+  background: rgb(187, 78, 78);
+  color: rgb(255, 255, 255);
+}
+
+.result {
+  display: block;
+  padding: 20px;
+}
+
+.result h4 {
+  margin-bottom: 12px;
+}
+
+hr {
+  color: black;
+  padding: 10px;
+}
+
+.result-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 1000px) {
+  .title h1 {
+    font-size: 60px;
+  }
+
+  .exp-img {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 40px;
+  }
+
+  .exp-img {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .title {
+    top: 50px;
+    max-width: 90%;
+  }
+  .title h1 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  .buttons {
+    margin-top: 150px;
+  }
+
+  .buttons button {
+    font-size: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .exp-title {
+    font-size: 25px;
+  }
+
+  .exp-img {
+    width: 200px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .form, .hasil {
+    width: 100%;
+  }
+
+  .home, .welcome, .how-to-use, .predict {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 10px;
+  }
+}
